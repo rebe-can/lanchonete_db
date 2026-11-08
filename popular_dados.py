@@ -48,7 +48,7 @@ def popular_dados():
           (int(row["categoria_id"]), str(row["nome"]), str(row["descricao"])),
       )
 
-    # 2.CLIENTES 
+    # 2 CLIENTES 
     print("Populando clientes...")
     for _, row in df_clientes.iterrows():
       cursor.execute(
