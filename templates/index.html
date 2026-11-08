@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lanchonete - Gestão de Pedidos</title>
+    <!--linkando o CSS externo no flask: -->
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+</head>
+<body>
+    <h1> Lanchonete APP - Resumo de Pedidos</h1>
+    <p> Dados consultados em tempo real diretamente da View do PostgreSQL.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID Pedido</th>
+                <th>Cliente</th>
+                <th>Data</th>
+                <th>Status</th>
+                <th>Produtos</th>
+                <th>Quantidade</th>
+                <th>Preço Unitário</th>
+                <th>Total Item</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in pedidos %}
+            <tr>
+            <td>{{ p.pedido_id }}</td>
+            <td>{{ p.nome_cliente }}</td>
+            <td>{{ p.data_pedido }}</td>
+            <td>{{ p.status_pedido }}</td>
+            <td>{{ p.nome_produto }}</td>
+            <td>{{ p.quantidade }}</td>
+            <td>R$ {{ "%.2f" | format(p.preco_unitario or 0) }}</td>
+            <td>R$ {{ "%.2f" | format(p.valor_total_item or 0) }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
