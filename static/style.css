@@ -1,28 +1,59 @@
-body{
-    font-family: Arial, sans-serif;
-    margin: 40px;
-    background-color: #f4f4f9;
-    color: #333;
+/* Estilos Globais e Fundo Moderno */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 30px;
+    background-color: #f8fafc;
+    color: #1e293b;
 }
+
+/* Cabeçalho */
 h1 {
-    color: #d9534f;
+    color: #0f172a;
+    font-size: 24px;
+    margin-bottom: 5px;
 }
+
+p {
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+/* Tabela Estilizada (Estilo Cartão) */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
+
 th, td {
-    padding:12px;
+    padding: 14px 18px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
 }
-th{
-    background-color: #d9534f;
+
+th {
+    background-color: #3b82f6; /* Azul moderno, podes trocar se preferires */
     color: white;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
-tr:hover{
-    background-color: #f1f1f1;
+
+td {
+    font-size: 14px;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover {
+    background-color: #f1f5f9;
+    transition: background-color 0.2s ease;
 }
